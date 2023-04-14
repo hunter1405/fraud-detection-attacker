@@ -140,7 +140,7 @@ def main():
     value=form.number_input('Return on assets', value=3367400)
     
     # Creating new feature Average Bill Amount 
-    features=[value,dob,unknown_var_8,unknown_var_9,unknown_var_10,unknown_var_12,unknown_var_14,unknown_var_15,social_friend_count,'unknown_var_17']
+    features=[value,dob,unknown_var_8,unknown_var_9,unknown_var_10,unknown_var_12,unknown_var_14,unknown_var_15,social_friend_count,unknown_var_17]
     pred = scaler.predict(np.array(features,ndmin=2))
 
     P_satus=form.form_submit_button("Predict")
