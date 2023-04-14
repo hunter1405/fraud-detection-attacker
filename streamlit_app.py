@@ -146,7 +146,7 @@ def main():
 
     
     # Creating new feature Average Bill Amount 
-    features=[variables = [Debt_ratio, Long_term_capital, Current_ratio, Quick_ratio, Interest_cover,Total_asset_turnover_ratio, 
+    features=[Debt_ratio, Long_term_capital, Current_ratio, Quick_ratio, Interest_cover,Total_asset_turnover_ratio, 
                            Fixed_asset_turnover_ratio, Inventory_turnover_ratio,              
                            Cash_flow_ratio, Accounts_receivable_turnover_ratio, Return_on_assets,              
                            Margin_before_interest_and_tax, Net_assets_per_stock, Return_on_stockholder_equity,Constant_net_assets_growth_ratio, 
