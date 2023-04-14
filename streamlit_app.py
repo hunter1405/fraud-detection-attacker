@@ -110,7 +110,7 @@ features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unk
 def main():
   if rad_b == 'Single':
     form = sl.form('Customer Details')
-    dob = form.number_input('dob', value=19810807)
+    dob = form.number_input('Return on stockholder’s equity', value=19810807)
 
     col1,col2 = form.columns(2)
     social_friend_count = col1.number_input('social_friend_count',value=653)
