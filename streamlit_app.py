@@ -125,17 +125,18 @@ def main():
     
     Cash_flow_ratio = form.number_input('Cash flow ratio', value=19810807)
  
-    col14,col15,col16,col17,col18=form.columns(5)
+    col14,col15,col16=form.columns(3)
     Accounts_receivable_turnover_ratio=col14.number_input('Accounts receivable turnover ratio', value=0.27)
     Return_on_assets=col15.number_input('Return on assets', value=0.195)
     Margin_before_interest_and_tax=col16.number_input('Margin before interest and tax', value=0.12)
+    
+    col17,col18,col19=form.columns(3)
     Net_assets_per_stock=col17.number_input('Net assets per stock', value=13)
     Return_on_stockholder_equity=col18.number_input('Return on stockholder’s equity', value=30)
-
+    Constant_net_assets_growth_ratio =col19.number_input('Constant net assets growth ratio ', value=0.27)
     Cash_flow_ratio = form.number_input('Cash flow ratio', value=19810807)
     
-    col19,col20,col21,col22=form.columns(4)
-    Constant_net_assets_growth_ratio =col19.number_input('Constant net assets growth ratio ', value=0.27)
+    col20,col21,col22=form.columns(3)
     Net_assets_growth_ratio_after_tax =col20.number_input('Net assets growth ratio after tax ', value=0.195)
     Frequent_interest_growth_ratio_after_tax=col21.number_input('Frequent interest growth ratio after tax', value=0.12)
     Return_on_total_assets_growth_ratio=col22.number_input('Return on total assets growth ratio', value=13)
