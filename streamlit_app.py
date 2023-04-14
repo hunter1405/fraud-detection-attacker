@@ -104,7 +104,8 @@ sl.title('Fraud Transaction Prediction')
 # Selection 
 rad_b=sl.radio('Please select that you want give Single or Multiple transaction data',options=['Single','Multiple'])
 
-features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unknown_var_3','unknown_var_7','unknown_var_8','unknown_var_9','unknown_var_10','unknown_var_12','unknown_var_14','unknown_var_15','social_friend_count', 'unknown_var_17']
+#features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unknown_var_3','unknown_var_7','unknown_var_8','unknown_var_9','unknown_var_10','unknown_var_12','unknown_var_14','unknown_var_15','social_friend_count', 'unknown_var_17']
+features=['value','dob,unknown_var_8','unknown_var_9','unknown_var_10','unknown_var_12','unknown_var_14','unknown_var_15','social_friend_count']
 
 # Body of the page using FORM
 def main():
