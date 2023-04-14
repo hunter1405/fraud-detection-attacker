@@ -96,7 +96,7 @@ def pred_out(num):
     if num == 1:
       sl.warning('You should BUY at the start of the year and sell at the end of the year for a profit!')
     else:
-      sl.success('You should NOT BUY at the start of the year and sell at the end of the year, since their value will decrease, meaning a loss of capital!')
+      sl.success('You should NOT BUY at the start of the year and sell at the end of the year!')
 
 # Titel 
 sl.title('Stock Return Prediction')
