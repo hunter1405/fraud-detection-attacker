@@ -99,38 +99,46 @@ def pred_out(num):
       sl.success('This transaction IS NOT LIKELY TO BE A FRAUD..!')
 
 # Titel 
-sl.title('Stock Return Prediction')
+sl.title('Fraud Transaction Prediction')
 
 # Selection 
 rad_b=sl.radio('Please select that you want give Single or Multiple transaction data',options=['Single','Multiple'])
 
 features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unknown_var_3','unknown_var_7','unknown_var_8','unknown_var_9','unknown_var_10','unknown_var_12','unknown_var_14','unknown_var_15','social_friend_count', 'unknown_var_17']
+
 # Body of the page using FORM
 def main():
   if rad_b == 'Single':
     form = sl.form('Customer Details')
-    dob = form.number_input('Return on stockholder’s equity', value=19810807)
+    dob = form.number_input('dob', value=19810807)
+
     col1,col2 = form.columns(2)
-    social_friend_count = col1.number_input('Return on assets',value=653)
-    unknown_var_17 = col2.number_input('Fixed asset turnover ratio', value=1436)
-
-    col4,col5 = form.columns(2)
-    unknown_var_14  = col4.number_input('Net assets per stock', value=1436)
-    unknown_var_12 = col5.number_input('Quick ratio', value=1436)
-
-    col9,col10 = form.columns(2)
-    unknown_var_7=col9.number_input('Accounts receivable turnover ratio', value=2)
-    unknown_var_1=col10.number_input('Cash flow ratio', value=4)
+    social_friend_count = col1.number_input('social_friend_count',value=653)
+    unknown_var_17 = col2.number_input('unknown_var_17', value=1436)
     
-    col6,col7,col8 = form.columns(3)
-    unknown_var_10 = col6.number_input('Net assets growth ratio after tax', value=1436)
-    unknown_var_9 = col7.number_input('Return on total assets growth ratio', value=1436)
-    unknown_var_8 = col8.number_input('Margin before interest and tax', value=1436)
+
+    # form.subheader('Bill Amount in the respective months in $')
+    col14,col15,col16=form.columns(3)
+    unknown_var_15=col14.number_input('unknown_var_15', value=0.27)
+    unknown_var_14=col15.number_input('unknown_var_14', value=0.195)
+    unknown_var_12=col16.number_input('unknown_var_12', value=0.12)
+    col17,col18,col19=form.columns(3)
+    unknown_var_10=col17.number_input('unknown_var_10', value=13)
+    unknown_var_9=col18.number_input('unknown_var_9', value=30)
+    unknown_var_8=col19.number_input('unknown_var_8', value=8.414)
     
+    # form.subheader('Amount paid for previous bill in $')
+    col7,col8,col9=form.columns(3)
+    unknown_var_7=col7.number_input('unknown_var_7', value=2)
+    unknown_var_1=col8.number_input('unknown_var_1', value=4)
+    unknown_var_2=col9.number_input('unknown_var_2', value=5)
+    col11,col12,col13=form.columns(3)
+    unknown_var_3=col11.number_input('unknown_var_3', value=11)
+    num_date_review=col12.number_input('num_date_review', value=9)
+    value=col13.number_input('value', value=3367400)
     
     # Creating new feature Average Bill Amount 
-    features = [social_friend_count,unknown_var_17,unknown_var_14,unknown_var_12,unknown_var_7,unknown_var_1,unknown_var_10,unknown_var_9,unknown_var_8,dob]
-
+    features=[value,num_date_review,dob,unknown_var_1,unknown_var_2,unknown_var_3,unknown_var_7,unknown_var_8,unknown_var_9,unknown_var_10,unknown_var_12,unknown_var_14,unknown_var_15,social_friend_count]
     pred = scaler.predict(np.array(features,ndmin=2))
 
     P_satus=form.form_submit_button("Predict")
@@ -150,5 +158,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-  
-    
