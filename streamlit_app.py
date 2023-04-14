@@ -99,7 +99,7 @@ def pred_out(num):
       sl.success('This transaction IS NOT LIKELY TO BE A FRAUD..!')
 
 # Titel 
-sl.title('Fraud Transaction Prediction')
+sl.title('Stock Return Prediction')
 
 # Selection 
 rad_b=sl.radio('Please select that you want give Single or Multiple transaction data',options=['Single','Multiple'])
