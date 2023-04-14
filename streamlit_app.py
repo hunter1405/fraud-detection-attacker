@@ -152,7 +152,7 @@ def main():
                            Net_assets_growth_ratio_after_tax,Frequent_interest_growth_ratio_after_tax, Return_on_total_assets_growth_ratio]
     pred = scaler.predict(np.array(features,ndmin=2))
 
-    P_satus=form.form_submit_button("Predict")
+    P_satus=st.form_submit_button("Predict")
     # If predict button clicked it will predict
     if P_satus:
       pred_out(pred)
