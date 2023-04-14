@@ -110,35 +110,47 @@ features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unk
 def main():
   if rad_b == 'Single':
     form = sl.form('Customer Details')
-    dob = form.number_input('dob', value=19810807)
-
     col1,col2 = form.columns(2)
-    social_friend_count = col1.number_input('social_friend_count',value=653)
-    unknown_var_17 = col2.number_input('unknown_var_17', value=1436)
+    Debt_ratio = col1.number_input('Debt ratio',value=653)
+    Long_term_capital = col2.number_input('Long-term capital', value=1436)
+    #dob = form.number_input('dob', value=19810807)
+
+    col3,col4,col5 = form.columns(3)
+    Current_ratio  = col3.number_input('Current ratio',value=653)
+    Quick_ratio  = col4.number_input('Quick ratio', value=1436)
+    Interest_cover = col5.number_input('Interest cover', value=1436)
+
+    col6,col7,col8 = form.columns(3)
+    Total_asset_turnover_ratio = col6.number_input('Total asset turnover ratio', value=1436)
+    Fixed_asset_turnover_ratio = col7.number_input('Fixed asset turnover ratio', value=1436)
+    Inventory_turnover_ratio = col8.number_input('Inventory turnover ratio', value=1436)
+    
+    Cash_flow_ratio = form.number_input('Cash flow ratio', value=19810807)
+ 
+    col14,col15,col16,col17,col18=form.columns(5)
+    Accounts_receivable_turnover_ratio=col14.number_input('Accounts receivable turnover ratio', value=0.27)
+    Return_on_assets=col15.number_input('Return on assets', value=0.195)
+    Margin_before_interest_and_tax=col16.number_input('Margin before interest and tax', value=0.12)
+    Net_assets_per_stock=col17.number_input('Net assets per stock', value=13)
+    Return_on_stockholder’s_equity=col18.number_input('Return on stockholder’s equity', value=30)
+
+    Cash_flow_ratio = form.number_input('Cash flow ratio', value=19810807)
+    
+    col19,col20,col21,col22=form.columns(4)
+    Constant_net_assets_growth_ratio =col19.number_input('Constant net assets growth ratio ', value=0.27)
+    Net_assets_growth_ratio_after_tax =col20.number_input('Net assets growth ratio after tax ', value=0.195)
+    Frequent_interest_growth_ratio_after_tax=col21.number_input('Frequent interest growth ratio after tax', value=0.12)
+    Return_on_total_assets_growth_ratio=col22.number_input('Return on total assets growth ratio', value=13)
+
     
 
-    # form.subheader('Bill Amount in the respective months in $')
-    col14,col15,col16=form.columns(3)
-    unknown_var_15=col14.number_input('unknown_var_15', value=0.27)
-    unknown_var_14=col15.number_input('unknown_var_14', value=0.195)
-    unknown_var_12=col16.number_input('unknown_var_12', value=0.12)
-    col17,col18,col19=form.columns(3)
-    unknown_var_10=col17.number_input('unknown_var_10', value=13)
-    unknown_var_9=col18.number_input('unknown_var_9', value=30)
-    unknown_var_8=col19.number_input('unknown_var_8', value=8.414)
-    
-    # form.subheader('Amount paid for previous bill in $')
-    col7,col8,col9=form.columns(3)
-    unknown_var_7=col7.number_input('unknown_var_7', value=2)
-    unknown_var_1=col8.number_input('unknown_var_1', value=4)
-    unknown_var_2=col9.number_input('unknown_var_2', value=5)
-    col11,col12,col13=form.columns(3)
-    unknown_var_3=col11.number_input('unknown_var_3', value=11)
-    num_date_review=col12.number_input('num_date_review', value=9)
-    value=col13.number_input('value', value=3367400)
     
     # Creating new feature Average Bill Amount 
-    features=[value,num_date_review,dob,unknown_var_1,unknown_var_2,unknown_var_3,unknown_var_7,unknown_var_8,unknown_var_9,unknown_var_10,unknown_var_12,unknown_var_14,unknown_var_15,social_friend_count]
+    features=[variables = [Debt_ratio, Long_term_capital, Current_ratio, Quick_ratio, Interest_cover,Total_asset_turnover_ratio, 
+                           Fixed_asset_turnover_ratio, Inventory_turnover_ratio,              
+                           Cash_flow_ratio, Accounts_receivable_turnover_ratio, Return_on_assets,              
+                           Margin_before_interest_and_tax, Net_assets_per_stock, Return_on_stockholder’s_equity,Constant_net_assets_growth_ratio, 
+                           Net_assets_growth_ratio_after_tax,Frequent_interest_growth_ratio_after_tax, Return_on_total_assets_growth_ratio]
     pred = scaler.predict(np.array(features,ndmin=2))
 
     P_satus=form.form_submit_button("Predict")
