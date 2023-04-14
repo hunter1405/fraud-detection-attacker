@@ -132,7 +132,7 @@ def main():
     Return_on_assets=col15.number_input('Return on assets', value=0.195)
     Margin_before_interest_and_tax=col16.number_input('Margin before interest and tax', value=0.12)
     Net_assets_per_stock=col17.number_input('Net assets per stock', value=13)
-    Return_on_stockholder’s_equity=col18.number_input('Return on stockholder’s equity', value=30)
+    Return_on_stockholder_equity=col18.number_input('Return on stockholder’s equity', value=30)
 
     Cash_flow_ratio = form.number_input('Cash flow ratio', value=19810807)
     
@@ -149,7 +149,7 @@ def main():
     features=[variables = [Debt_ratio, Long_term_capital, Current_ratio, Quick_ratio, Interest_cover,Total_asset_turnover_ratio, 
                            Fixed_asset_turnover_ratio, Inventory_turnover_ratio,              
                            Cash_flow_ratio, Accounts_receivable_turnover_ratio, Return_on_assets,              
-                           Margin_before_interest_and_tax, Net_assets_per_stock, Return_on_stockholder’s_equity,Constant_net_assets_growth_ratio, 
+                           Margin_before_interest_and_tax, Net_assets_per_stock, Return_on_stockholder_equity,Constant_net_assets_growth_ratio, 
                            Net_assets_growth_ratio_after_tax,Frequent_interest_growth_ratio_after_tax, Return_on_total_assets_growth_ratio]
     pred = scaler.predict(np.array(features,ndmin=2))
 
