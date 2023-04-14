@@ -108,25 +108,24 @@ rad_b=sl.radio('Please select that you want give Single or Multiple transaction 
 def main():
   if rad_b == 'Single':
     form = sl.form('Customer Details')
+    dob = form.number_input('Return on stockholder’s equity', value=19810807)
     col1,col2 = form.columns(2)
     social_friend_count = col1.number_input('Return on assets',value=653)
     unknown_var_17 = col2.number_input('Fixed asset turnover ratio', value=1436)
 
-    col3,col4,col5 = form.columns(3)
+    col4,col5 = form.columns(2)
     unknown_var_14  = col4.number_input('Net assets per stock', value=1436)
     unknown_var_12 = col5.number_input('Quick ratio', value=1436)
 
-    col9,col10 = form.columns(10)
-    unknown_var_7=col7.number_input('Accounts receivable turnover ratio', value=2)
-    unknown_var_1=col8.number_input('Cash flow ratio', value=4)
+    col9,col10 = form.columns(2)
+    unknown_var_7=col9.number_input('Accounts receivable turnover ratio', value=2)
+    unknown_var_1=col10.number_input('Cash flow ratio', value=4)
     
     col6,col7,col8 = form.columns(3)
     unknown_var_10 = col6.number_input('Net assets growth ratio after tax', value=1436)
     unknown_var_9 = col7.number_input('Return on total assets growth ratio', value=1436)
     unknown_var_8 = col8.number_input('Margin before interest and tax', value=1436)
     
-    dob = form.number_input('Return on stockholder’s equity', value=19810807)
-
     
     # Creating new feature Average Bill Amount 
     features = [social_friend_count,     
