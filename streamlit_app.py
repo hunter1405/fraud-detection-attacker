@@ -94,9 +94,9 @@ def multi_cust(file):
  # Function to print out put which also converts numeric output from ML module to understandable STR 
 def pred_out(num):
     if num == 1:
-      sl.warning('This transaction IS LIKELY TO BE FRAUD..!')
+      sl.warning('You should BUY at the start of the year and sell at the end of the year for a profit!')
     else:
-      sl.success('This transaction IS NOT LIKELY TO BE A FRAUD..!')
+      sl.success('You should NOT BUY at the start of the year and sell at the end of the year, since their value will decrease, meaning a loss of capital!')
 
 # Titel 
 sl.title('Stock Return Prediction')
