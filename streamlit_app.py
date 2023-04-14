@@ -104,6 +104,7 @@ sl.title('Stock Return Prediction')
 # Selection 
 rad_b=sl.radio('Please select that you want give Single or Multiple transaction data',options=['Single','Multiple'])
 
+features = [social_friend_count,unknown_var_17,unknown_var_14,unknown_var_12,unknown_var_7,unknown_var_1,unknown_var_10,unknown_var_9,unknown_var_8,dob]
 # Body of the page using FORM
 def main():
   if rad_b == 'Single':
@@ -128,16 +129,7 @@ def main():
     
     
     # Creating new feature Average Bill Amount 
-    features = [social_friend_count,     
-    unknown_var_17,     
-    unknown_var_14,     
-    unknown_var_12,     
-    unknown_var_7,     
-    unknown_var_1,     
-    unknown_var_10,     
-    unknown_var_9,     
-    unknown_var_8,    
-    dob]
+    features = [social_friend_count,unknown_var_17,unknown_var_14,unknown_var_12,unknown_var_7,unknown_var_1,unknown_var_10,unknown_var_9,unknown_var_8,dob]
 
     pred = scaler.predict(np.array(features,ndmin=2))
 
