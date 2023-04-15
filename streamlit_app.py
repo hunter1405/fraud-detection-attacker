@@ -111,22 +111,22 @@ features = ['value','num_date_review','dob','unknown_var_1','unknown_var_2','unk
 def main():
   if rad_b == 'Single':
     form = sl.form('Customer Details')
-    dob = form.number_input('Return on stockholder’s equity', value=19810807)
+    dob = form.number_input('Return on stockholder’s equity', value=0.25)
 
     col1,col2 = form.columns(2)
-    social_friend_count = col1.number_input('Margin before interest and tax',value=653)
-    unknown_var_17 = col2.number_input('Return on total assets growth ratio', value=1436)
+    social_friend_count = col1.number_input('Margin before interest and tax',value=0.3)
+    unknown_var_17 = col2.number_input('Return on total assets growth ratio', value=0.1)
     
 
     # form.subheader('Bill Amount in the respective months in $')
     col14,col15,col16=form.columns(3)
     unknown_var_15=col14.number_input('Net assets growth ratio after tax', value=0.27)
-    unknown_var_14=col15.number_input('Cash flow ratio', value=0.195)
-    unknown_var_12=col16.number_input('Accounts receivable turnover ratio', value=0.12)
+    unknown_var_14=col15.number_input('Cash flow ratio', value=2)
+    unknown_var_12=col16.number_input('Accounts receivable turnover ratio', value=5)
     col17,col18,col19=form.columns(3)
-    unknown_var_10=col17.number_input('Quick ratio', value=13)
-    unknown_var_9=col18.number_input('Net assets per stock', value=30)
-    unknown_var_8=col19.number_input('Fixed asset turnover ratio', value=8.414)
+    unknown_var_10=col17.number_input('Quick ratio', value=1.5)
+    unknown_var_9=col18.number_input('Net assets per stock', value=15000)
+    unknown_var_8=col19.number_input('Fixed asset turnover ratio', value=10)
     
     # form.subheader('Amount paid for previous bill in $')
     #col7,col8,col9=form.columns(3)
