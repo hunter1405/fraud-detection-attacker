@@ -121,12 +121,12 @@ def main():
     # form.subheader('Bill Amount in the respective months in $')
     col14,col15,col16=form.columns(3)
     unknown_var_15=col14.number_input('Net assets growth ratio after tax', value=0.27)
-    unknown_var_14=col15.number_input('Cash flow ratio', value=2)
+    unknown_var_14=col15.number_input('Cash flow ratio', value=0.173)
     unknown_var_12=col16.number_input('Accounts receivable turnover ratio', value=5)
     col17,col18,col19=form.columns(3)
-    unknown_var_10=col17.number_input('Quick ratio', value=1.5)
+    unknown_var_10=col17.number_input('Quick ratio', value=1.41)
     unknown_var_9=col18.number_input('Net assets per stock', value=15000)
-    unknown_var_8=col19.number_input('Fixed asset turnover ratio', value=10)
+    unknown_var_8=col19.number_input('Fixed asset turnover ratio', value=0.76)
     
     # form.subheader('Amount paid for previous bill in $')
     #col7,col8,col9=form.columns(3)
@@ -144,7 +144,7 @@ def main():
     num_date_review=9
     
     # form.subheader('Amount paid for previous bill in $')
-    value=form.number_input('Return on assets', value=3367400)
+    value=form.number_input('Return on assets', value=0.0304)
     
     # Creating new feature Average Bill Amount 
     features=[value,num_date_review,dob,unknown_var_1,unknown_var_2,unknown_var_3,unknown_var_7,unknown_var_8,unknown_var_9,unknown_var_10,unknown_var_12,unknown_var_14,unknown_var_15,social_friend_count]
