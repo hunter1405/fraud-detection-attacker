@@ -2,4 +2,4 @@ streamlit==1.3.0
 pandas
 numpy
 scikit-learn
-altair
+altair==4.1.0
