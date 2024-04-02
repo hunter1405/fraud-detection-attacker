@@ -43,6 +43,7 @@ with st.expander('About this app'):
 8. TATA: Total accruals to total assets
 
   The eight variables are then weighted together according to the following formula:
+  
 **M-Score = -4.84 + 0.92*DSRI + 0.528*GMI + 0.404*AQI + 0.892*SGI + 0.115*DEPI – 0.172*SGAI + 4.679*TATA – 0.327*LVGI**
   ''')
 
