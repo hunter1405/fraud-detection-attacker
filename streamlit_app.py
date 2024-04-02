@@ -40,16 +40,18 @@ def main():
         unknown_var_2 = col4.number_input('Current Assets')
 
         
-        col16,col17, col18, col19 = form.columns(4)
+        col16,col17, col18 = form.columns(3)
         unknown_var_12 = col16.number_input('Total Assets')
         unknown_var_10 = col17.number_input('Depreciation')
         unknown_var_9 = col18.number_input('Sales & General Administration Expenses')
-        unknown_var_8 = col19.number_input('Total Revenue')
 
-        col20,col21, col22, col23 = form.columns(4)
+        col20,col21, col22 = form.columns(3)
         unknown_var_7 = col20.number_input('Income from Continuing Operations')
         unknown_var_3 = col21.number_input('Cash Flow from Operations')
         num_date_review = col22.number_input('Current Liabilities')
+        
+        col19,col23 = form.columns(2)
+        unknown_var_8 = col19.number_input('Total Revenue')
         value = col23.number_input('Total Long-term Debt')
 
         features = [value, num_date_review, dob, unknown_var_1, unknown_var_2, unknown_var_3,
