@@ -30,7 +30,7 @@ st.markdown("""
 st.title('Predict Fraud Detection')
 
 # Selection 
-rad_b = st.radio('Please select that you want give Single or Multiple data', options=['Single', 'Multiple'])
+rad_b = st.radio('Please select that you want to give Single or Multiple data', options=['Single', 'Multiple'])
 
 # Function use to open link which will download the demo excel file
 def open_link(str):
