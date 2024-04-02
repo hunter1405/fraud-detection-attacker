@@ -84,7 +84,7 @@ def main():
     else:
         # Multi transaction 
         st.subheader('Please Download the Demo excel file')
-        st.text('Note:- enter the details of custome, save & Upload, Dont change to format.!')
+        st.text('Note:- enter the details of Company, save & Upload, Dont change to format.!')
         # HTML code for downloading demo file 
         com.html(f"""<button onclick="window.location.href='https://drive.google.com/uc?export=download&id=10aYBUF50jjAWvi-ukZZE2Q6_8pbLoUon';">
                           Download Demo File</button>""", height=30)
