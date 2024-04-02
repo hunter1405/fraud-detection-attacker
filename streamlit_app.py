@@ -10,7 +10,7 @@ import streamlit.components.v1 as com
 import joblib
 
 # Titel 
-st.title('Stock Return Prediction')
+st.title('Predict Fraud Detection')
 
 # Selection 
 rad_b = st.radio('Please select that you want give Single or Multiple data', options=['Single', 'Multiple'])
