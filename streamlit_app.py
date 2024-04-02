@@ -27,21 +27,21 @@ with open('model.pkl', 'rb') as S_file:
 def main():
     if rad_b == 'Single':
         form = st.form('Customer Details')
-        dob = form.number_input('Return on stockholder’s equity', value=0.25)
+        dob = form.number_input('DSR', value=0.25)
 
         col1, col2 = form.columns(2)
-        social_friend_count = col1.number_input('Margin before interest and tax', value=0.3)
-        unknown_var_17 = col2.number_input('Return on total assets growth ratio', value=0.1)
+        social_friend_count = col1.number_input('GMI', value=0.3)
+        unknown_var_17 = col2.number_input('AQI', value=0.1)
 
         col14, col15, col16 = form.columns(3)
-        unknown_var_15 = col14.number_input('Net assets growth ratio after tax', value=0.27)
-        unknown_var_14 = col15.number_input('Cash flow ratio', value=0.173)
-        unknown_var_12 = col16.number_input('Accounts receivable turnover ratio', value=5)
+        unknown_var_15 = col14.number_input('SGI', value=0.27)
+        unknown_var_14 = col15.number_input('DEPI', value=0.173)
+        unknown_var_12 = col16.number_input('SGAI', value=5)
 
         col17, col18, col19 = form.columns(3)
-        unknown_var_10 = col17.number_input('Quick ratio', value=1.41)
-        unknown_var_9 = col18.number_input('Net assets per stock', value=15000)
-        unknown_var_8 = col19.number_input('Fixed asset turnover ratio', value=0.76)
+        unknown_var_10 = col17.number_input('TATA', value=1.41)
+        unknown_var_9 = col18.number_input('LVGI', value=15000)
+        unknown_var_8 = 0.76
 
         unknown_var_7 = 2
         unknown_var_1 = 4
@@ -49,7 +49,7 @@ def main():
         unknown_var_3 = 11
         num_date_review = 9
 
-        value = form.number_input('Return on assets', value=0.0304)
+        value = 0.0304
 
         features = [value, num_date_review, dob, unknown_var_1, unknown_var_2, unknown_var_3,
                     unknown_var_7, unknown_var_8, unknown_var_9, unknown_var_10, unknown_var_12,
@@ -105,9 +105,9 @@ def multi_cust(file):
 
 def pred_out(num):
     if num == 1:
-        sl.warning('You should BUY at the start of the year and sell at the end of the year for a profit!')
+        sl.warning('The model predicts that this company is FRAUD')
     else:
-        sl.success('You should NOT BUY at the start of the year and sell at the end of the year!')
+        sl.success('The model predicts that this company is NOT FRAUD')
 
 if __name__ == '__main__':
     main()
