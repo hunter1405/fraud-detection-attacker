@@ -31,7 +31,8 @@ with st.expander('About this app'):
   st.info('This app allow users to use a machine learning (ML) model to predict if this company is FRAUD or NOT FRAUD based on M-score.')
   
   st.markdown('**What is M-score?**')
-  st.info('''The Beneish model's eight variables are:
+  st.info(''' M-Score is a mathematical model that uses eight financial ratios weighted by coefficients to identify whether a company has manipulated its profits.
+  The M-score model's eight variables are:
 1. DSRI: Days' sales in a receivable index
 2. GMI: Gross margin index
 3. AQI: Asset quality index
@@ -40,6 +41,9 @@ with st.expander('About this app'):
 6. SGAI: Sales and general and administrative expenses index
 7. LVGI: Leverage index
 8. TATA: Total accruals to total assets
+
+  The eight variables are then weighted together according to the following formula:
+Beneish M-Score = -4.84 + 0.92*DSRI + 0.528*GMI + 0.404*AQI + 0.892*SGI + 0.115*DEPI – 0.172*SGAI + 4.679*TATA – 0.327*LVGI
   ''')
 
 
