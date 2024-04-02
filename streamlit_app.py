@@ -27,29 +27,30 @@ with open('model.pkl', 'rb') as S_file:
 def main():
     if rad_b == 'Single':
         form = st.form('Customer Details')
-        dob = form.number_input('DSR', value=0.25)
+        dob = form.number_input('Accounts Receivables', value=0.25)
 
-        col1, col2 = form.columns(2)
-        social_friend_count = col1.number_input('GMI', value=0.3)
-        unknown_var_17 = col2.number_input('AQI', value=0.1)
+        col1, col2,col3, col4 = form.columns(4)
+        social_friend_count = col1.number_input('Revenue')
+        unknown_var_17 = col2.number_input('Number of Days')
+        unknown_var_1 = col3.number_input('Gross Profit Margin')
+        unknown_var_2 = col3.number_input('Current Assets')
+        
+        col14, col15 = form.columns(2)
+        unknown_var_15 = col14.number_input('PPE')
+        unknown_var_14 = col15.number_input('Total Long-termInvestments')
 
-        col14, col15, col16 = form.columns(3)
-        unknown_var_15 = col14.number_input('SGI', value=0.27)
-        unknown_var_14 = col15.number_input('DEPI', value=0.173)
-        unknown_var_12 = col16.number_input('SGAI', value=5)
+        
+        col16,col17, col18, col19 = form.columns(4)
+        unknown_var_12 = col16.number_input('Total Assets')
+        unknown_var_10 = col17.number_input('Depreciation')
+        unknown_var_9 = col18.number_input('Sales and General Administration Expenses')
+        unknown_var_8 = col19.number_input('Total Revenue')
 
-        col17, col18, col19 = form.columns(3)
-        unknown_var_10 = col17.number_input('TATA', value=1.41)
-        unknown_var_9 = col18.number_input('LVGI', value=15000)
-        unknown_var_8 = 0.76
-
-        unknown_var_7 = 2
-        unknown_var_1 = 4
-        unknown_var_2 = 5
-        unknown_var_3 = 11
-        num_date_review = 9
-
-        value = 0.0304
+        col20,col21, col22, col23 = form.columns(4)
+        unknown_var_7 = col20.number_input('Income from Continuing Operations')
+        unknown_var_3 = col21.number_input('Cash Flow from Operations')
+        num_date_review = col22.number_input('Current Liabilities')
+        value = col23.number_input('Total Long-term Debt')
 
         features = [value, num_date_review, dob, unknown_var_1, unknown_var_2, unknown_var_3,
                     unknown_var_7, unknown_var_8, unknown_var_9, unknown_var_10, unknown_var_12,
