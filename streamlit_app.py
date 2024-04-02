@@ -26,8 +26,22 @@ st.markdown("""
 </nav>
 """, unsafe_allow_html=True)
 
-# Titel 
-st.title('Predict Fraud Detection')
+with st.expander('About this app'):
+  st.markdown('**What can this app do?**')
+  st.info('This app allow users to use a machine learning (ML) model to predict if this company is FRAUD or NOT FRAUD based on M-score.')
+  
+  st.markdown('**What is M-score?**')
+  st.info('''The Beneish model's eight variables are:
+1. DSRI: Days' sales in a receivable index
+2. GMI: Gross margin index
+3. AQI: Asset quality index
+4. SGI: Sales growth index
+5. DEPI: Depreciation index
+6. SGAI: Sales and general and administrative expenses index
+7. LVGI: Leverage index
+8. TATA: Total accruals to total assets
+  ''')
+
 
 # Selection 
 rad_b = st.radio('Please select that you want to give Single or Multiple data', options=['Single', 'Multiple'])
