@@ -27,7 +27,7 @@ with open('model.pkl', 'rb') as S_file:
 def main():
     if rad_b == 'Single':
         form = st.form('Customer Details')
-        dob = form.number_input('Accounts Receivables', value=0.25)
+        dob = form.number_input('Accounts Receivables')
 
         col1, col2, col3 = form.columns(3)
         social_friend_count = col1.number_input('Revenue')
