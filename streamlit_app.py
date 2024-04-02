@@ -29,21 +29,21 @@ def main():
         form = st.form('Customer Details')
         dob = form.number_input('Accounts Receivables', value=0.25)
 
-        col1, col2,col3, col4 = form.columns(4)
+        col1, col2,col3, col4 = form.columns(3)
         social_friend_count = col1.number_input('Revenue')
         unknown_var_17 = col2.number_input('Number of Days')
         unknown_var_1 = col3.number_input('Gross Profit Margin')
-        unknown_var_2 = col3.number_input('Current Assets')
         
-        col14, col15 = form.columns(2)
+        col14, col15,col4 = form.columns(3)
         unknown_var_15 = col14.number_input('PPE')
         unknown_var_14 = col15.number_input('Total Long-termInvestments')
+        unknown_var_2 = col4.number_input('Current Assets')
 
         
         col16,col17, col18, col19 = form.columns(4)
         unknown_var_12 = col16.number_input('Total Assets')
         unknown_var_10 = col17.number_input('Depreciation')
-        unknown_var_9 = col18.number_input('Sales and General Administration Expenses')
+        unknown_var_9 = col18.number_input('Sales & General Administration Expenses')
         unknown_var_8 = col19.number_input('Total Revenue')
 
         col20,col21, col22, col23 = form.columns(4)
